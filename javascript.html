@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>max num</title>
+</head>
+<body>
+    <h2>leap year</h2>
+    <input type="text" id="leapyear">
+    <button type="button" onclick="answer()">=</button>
+    <input type="text" id="leap2">
+    <br>
+    <hr>
+    <h3>max num</h3>
+    <input type="text" id="num1">
+    <button type="button" onclick="answer1()">=</button>
+    <input type="text" id="num2">
+    <input type="text" id="result">
+    <br>
+    <hr>
+    <h1>max three num</h1>
+    <input type="text" id="max1">
+    <input type="text" id="max2">
+    <input type="text" id="max3">
+    <button type="button" onclick="answer2()">=</button>
+    <input type="text" id="result1">
+    <br>
+    <hr>
+    <h2>positve or negative</h2>
+    <input type="text" id="input">
+    <button type="button" onclick="answer3()">=</button>
+    <input type="text" id="result2">
+    <br>
+    <hr>
+    <h2>vowels</h2>
+    <input type="text" id="letter">
+    <button type="button" onclick="answer4()">=</button>
+    <input type="text" id="vowel">
+    <br>
+    <hr>
+    <h2>alphapets or numbers</h2>
+    <input type="text" id="alphapets">
+    <button type="button" onclick="answer5()">=</button>
+    <input type="text" id="result3">
+    <br>
+    <hr>
+    <h2>days</h2>
+    <input type="text" id="week" />
+    <button type="button" onclick="answer6()">ADD</button>
+    <input type="text" id="result4">
+    <br>
+    <hr>
+    <h2>months</h2>
+    <input type="text" id="month" />
+    <button type="button" onclick="answer7()">ADD</button>
+    <input type="text" id="result5">
+   
+
+    <script>
+        function answer(){
+        let a=Number(document.getElementById('leapyear').value);
+        if(a%4==0){
+            leap2.value ="leap year";
+        }
+        else{
+            leap2.value ="Not a Leap year";
+        }
+    }
+        function answer1(){
+            let a=Number(document.getElementById('num1').value);
+            let b=Number(document.getElementById('num2').value);
+            if(a>b){
+                result.value=a;
+            }
+            else{
+                result.value=b;
+            }
+        }
+        function answer2(){
+            let a=Number(document.getElementById('max1').value);
+            let b=Number(document.getElementById('max2').value);
+            let c=Number(document.getElementById('max3').value);
+            if(a>b && a>c){
+                result1.value=a;
+            }
+            else if(b>a && b>c){
+                result1.value=b;
+            }
+            else if(c>a && c>b){
+                result1.value=c;
+            }
+        }
+        function answer3(){
+            let number=Number(document.getElementById('input').value);
+            if(number>0){
+                result2.value="Positive Number";
+            }
+            else{
+                result2.value="Negative Number";
+            }
+        }
+        function answer4(){
+            let L=document.getElementById('letter').value;
+            if(L=='a'||L=='e'||L=='i'||L=='o'||L=='U'){
+                vowel.value="vowel";     
+            }
+            else if(!(L=='a'||L=='e'||L=='i'||L=='o'||L=='u')){
+                vowel.value="not a vowel";
+            }
+            
+
+        }
+        function answer5(){
+            let Alphapets=Number(document.getElementById('Alphapets')).value;
+            if(Number(Alphapets) >=0  ||Number(Alphapets) <=0)
+            {
+                result3.value="Number";
+            }
+            else {
+                result3.value="alphapets";
+            }
+        }
+        function answer6(){
+            let Week= Number(document.getElementById('week').value);
+            switch(Week){
+                case 1:
+                   result4.value=("Sunday");
+                   break;
+                case 2:
+                   result4.value=("Monday");
+                   break;
+                case 3:
+                   result4.value=("Tuesday");
+                   break;
+                case 4:   
+                   result4.value=("Wenesday");
+                   break;
+                case 5:
+                   result4.value=("Thursday");
+                   break;
+                case 6:
+                   result4.value=("Friday");
+                   break;
+                case 7:
+                   result4.value=("Saturday");
+                   break;
+                   default:
+                    result4.value=("not a week");
+                    break;
+            }
+        }
+
+            function answer7(){
+            let months= Number(document.getElementById('month').value);
+            switch(months){
+                case 1:
+                   result5.value=("Jan");
+                   break;
+                case 2:
+                   result5.value=("Feb");
+                   break;
+                case 3:
+                   result5.value=("Mar");
+                   break;
+                case 4:   
+                   result5.value=("Aprl");
+                   break;
+                case 5:
+                   result5.value=("may");
+                   break;
+                case 6:
+                   result5.value=("jun");
+                   break;
+                case 7:
+                   result5.value=("jul");
+                   break;
+                case 8:
+                    result5.value=("aug");
+                    break;
+                case 9:
+                    result5.value=("sept");
+                    break;
+                case 10:
+                    result5.value=("oct");
+                    break;
+                case 11:
+                    result5.value=("nov");
+                    break;
+                case 12:
+                    result5.value=("dec");
+                    break;
+                   default:
+                    result5.value=("not a months");
+                    break;
+            }
+        }
+        
+    
+        
+    </script>        
+
+             
+    
+    
+</body>
+</html>
